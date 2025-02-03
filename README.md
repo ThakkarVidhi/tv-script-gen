@@ -44,6 +44,7 @@
 
 **Machine Learning Framework**:
 - PyTorch (for deep learning and RNN implementation)
+- CUDA (for GPU-accelerated training)
 
 **Data Processing**:
 - NumPy, Pandas (for dataset preprocessing)
@@ -52,6 +53,7 @@
 **Model Training & Evaluation**:
 - RNN, LSTM architectures (for text generation)
 - Google Colab (for training execution)
+- CUDA-enabled GPUs for faster training
 
 **Other Tools**:
 - Jupyter Notebook (for experimentation and model development)
@@ -94,7 +96,12 @@ To set up the project locally, follow these steps:
     pip install -r requirements.txt
     ```
 
-4. Run the Jupyter Notebook:
+4. Ensure you have CUDA installed for GPU acceleration:
+    ```bash
+    nvcc --version  # Check CUDA installation
+    ```
+
+5. Run the Jupyter Notebook:
     ```bash
     jupyter notebook
     ```
@@ -109,10 +116,10 @@ All script generation processes are handled within the provided **Jupyter Notebo
     Launch Jupyter Notebook and open `tv_script_generator.ipynb`:
 
 2. **Train the Model (Optional)**  
-    If you want to train the model from scratch instead of using           pre-trained weights, run the training cells in the notebook. This      will process the Seinfeld dataset and train an RNN model using         PyTorch.
+    If you want to train the model from scratch instead of using pre-trained weights, run the training cells in the notebook. This will process the Seinfeld dataset and train an RNN model using PyTorch **with CUDA acceleration** if available.
 
 3. **Generate a Seinfeld Dialogue**  
-Once the model is trained or pre-trained weights are loaded, execute the generation cells to create new TV script dialogues. Modify the prompt to start the conversation.
+    Once the model is trained or pre-trained weights are loaded, execute the generation cells to create new TV script dialogues. Modify the prompt to start the conversation.
     Example usage:
     ```bash
     generated_script = generate_script("Jerry: So I was thinking...", length=100, temperature=0.8)
@@ -173,7 +180,7 @@ Special thanks to:
 **A:** Yes! Replace `seinfeld_scripts.txt` with your own dataset and retrain the model.
 
 **Q: How long does training take?**  
-**A:** Depending on hardware, training may take an hour or so on a GPU.
+**A:** Depending on hardware, training may take an hour or so on a GPU. Using CUDA can significantly speed up the process.
 
 ---
 
