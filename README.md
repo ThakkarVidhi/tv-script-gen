@@ -23,7 +23,6 @@
 - [Configuration](#configuration)
 - [Testing](#testing)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 - [FAQs](#faqs)
 - [Contact Information](#contact-information)
 
@@ -159,15 +158,6 @@ To test the model and generation pipeline, you can try it out by generating your
 
 This project is licensed under the [MIT License](LICENSE).  
 ![License](https://img.shields.io/badge/license-MIT-blue)
-
----
-
-## Acknowledgments
-
-Special thanks to:
-- The creators of Seinfeld for inspiring this project.
-- OpenAI’s community for discussions on text generation.
-- PyTorch for making deep learning accessible.
 
 ---
 
